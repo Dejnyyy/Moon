@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background: rgb(4,3,67);
+    background: linear-gradient(225deg, rgba(4,3,67,1) 0%, rgba(0,2,6,1) 20%, rgba(0,2,6,1) 80%, rgba(0,46,55,1) 100%);
+    background-size: 1560px 800px;
+}
+
+.menu{
+    margin-top: 300px;
+    margin-left: 40%;
+    width: 250px;
+    height: 65px;
+    
+    position: relative;
+    display: flex;
+    border-radius: 20px;
+     
+}
+
+.login{
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-top: 20px ;
+    width: 200px;
+    height: 25px;
+    box-shadow: 0 0 10px #FFFFFF ; 
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+.signup{
+    border: none;
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-top: 20px ;
+    width: 200px;
+    height: 25px;
+    box-shadow: 0 0 10px #FFFFFF ; 
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+
+.createPost{
+    border: none;
+    border-radius: 25px;    
+    width: 200px;
+    height: 25px;
+    box-shadow: 0 0 10px #FFFFFF ; 
+    margin-top: 10px;
+    margin-left: 45.25%;
+    width: 100px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
