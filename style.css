@@ -1,6 +1,9 @@
 ::selection {
   background: #5203ab;
 }
+a:active {
+  color: #5203ab;
+}
 body{
     margin: 0;
     padding: 0;
@@ -44,11 +47,16 @@ body{
 .log{
   border: none;
   border-radius: 25px;
- margin-left: 30px;
- margin-top: 20px ;
- width: 100px;
- height: 25px;
- box-shadow: 0 0 10px #FFFFFF ; 
+  margin-left: 30px;
+  margin-top: 20px ;
+  width: 100px;
+  height: 25px;
+  box-shadow: 0 0 10px #FFFFFF ; 
+  color: #5203ab;
+}
+.loga{
+  text-decoration: none;
+  
 }
 .reg{
   border: none;
@@ -58,6 +66,10 @@ body{
   width: 100px;
   height: 25px;
   box-shadow: 0 0 10px #FFFFFF ; 
+  color: #5203ab;
+}
+.rega{
+  text-decoration: none;
 }
 .logged{
     display: hidden;
@@ -135,5 +147,3 @@ body{
   cursor: pointer;
  transform: scale(1.5); 
 }
-
-
