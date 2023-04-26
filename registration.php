@@ -1,42 +1,19 @@
-<?php
-// Connect to database
-$host = "localhost"; // Replace with your host name
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "Moon"; // Replace with your database name
+<?php 
+    include "connection.php";
 
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $username = $_POST['username'];
+    $password = sha1($_POST['password']);
+    $email = $_POST['email'];
+    $question = $_POST['con_question'];
+    $answer = $_POST['con_answer'];
+    $note = $_POST['note'];
 
-$conn = mysqli_connect($host, $username, $password, $dbname);
+    $sql = "INSERT INTO user (name, surname, username, password, email, question, answer, note) VALUES ('".$name."', '".$surname."', '".$username."', '".$password."', '".$email."', '".$con_question."', '".$con_answer."', '".$note."')";
+    mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+    header("Location: ../index.php");
+    die();
 
-// Check if form submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Get form data
-    $name = $_POST["name"];
-    $surname = $_POST["surname"];
-    $username = $_POST["username"];
-    $password= $_POST["password"];
-    $email = $_POST["email"];
-    $con_question = $_POST["con_question"];
-    $con_answer = $_POST["con_answer"];
-    $note = $_POST["note"];
-
-
-    // Insert data into database
-    $sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Data inserted successfully";
-    } else {
-        echo "Error inserting data: " . mysqli_error($conn);
-    }
-}
-
-// Close database connection
-mysqli_close($conn);
-?>
+?>  
