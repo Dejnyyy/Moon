@@ -71,8 +71,27 @@
 
             <div class="post">
                 <button class="postbtn"><a style="text-decoration: none" href="choose.html">+</a></button>
-            </div>
+            </div>            
         </div>
     </div>
+    <!--
+    <script>
+      // Retrieve the latest post data from the server using AJAX
+      $.get("/getLatestPost.php", function(data) {
+          // Parse the JSON data
+          const post = JSON.parse(data);
+          
+          // Create a new post element with the given data
+          const postElement = `
+            <div class="post">
+              <h2 class="post-title">${post.title}</h2>
+              <p class="post-text">${post.text}</p>
+            </div>
+          `;
+          
+          // Append the new post element to the HTML body
+          $("body").append(postElement);
+        });
+          </script>-->
 </body>
 </html>

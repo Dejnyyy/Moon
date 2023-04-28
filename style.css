@@ -127,7 +127,6 @@ body{
   display: inline-block;
   margin-left: 4%;
   margin-top: 35px;
-  
   box-shadow: 0 0 10px #5203ab ;
 }
 .postbtn{
@@ -150,4 +149,15 @@ body{
 }
 .odhlasit{
   margin-left: 40px;
+}
+.postcreated{
+  background-color: white;
+  width: 250px;
+  height: 350px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 4%;
+  margin-top: 35px;
+  
+  box-shadow: 0 0 10px #5203ab ;
 }

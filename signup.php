@@ -48,9 +48,25 @@
         </div>
         
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
-       <input type="submit"class="btn1"class="btn1a" value="Sign up">
+       <input type="submit"class="btn1"class="btn1a"  onclick="return checkPasswordMatch();"onclick="return validateEmail(e-mail)" value="Sign up">
       </form>
     </div>
-    
+    <script>
+function checkPasswordMatch() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password != confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+
+    return true;
+
+    function validateEmail(e-mail) {
+        return String(email).match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
+    }
+}
+</script>
    </body> 
 </html>

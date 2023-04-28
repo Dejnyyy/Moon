@@ -17,14 +17,12 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="text"id="text" name="text" required>
         </div>
-        <!--<div class="form-group">  
-            <input type="file" class="inputFile" id="inputFile" name="inputFile">
-        </div>-->
-        
+       
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
-        <input type="submit"class="btn1"  value="Create Post">
+        <input type="submit" class="btn1"  value="Create Post">
 
       </form>
     </div>
+   
    </body>
 </html>
