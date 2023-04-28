@@ -114,7 +114,10 @@ body{
   width: 60%;
   height: 200%;
   margin-left: 20%;
-  box-shadow: 0 0 10px #5203ab ;  
+  box-shadow: 0 0 10px #5203ab ; 
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important ;
   
 }
 .feed>div{
@@ -133,6 +136,7 @@ body{
 }
 .post{
   overflow-wrap: break-word; 
+  
 }
 .postbtn{
   color:#5203ab;
@@ -166,4 +170,8 @@ body{
   box-shadow: 0 0 10px #FFFFFF ; 
   color: #5203ab;
   cursor: pointer;
+}
+.post {
+  display: inline-block;
+  margin-bottom: 20px; /* add some margin between posts */
 }

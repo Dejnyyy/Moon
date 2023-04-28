@@ -62,6 +62,7 @@
                 <button class="postbtn"><a style="text-decoration: none" href="choose.html">+</a></button>
             </div>      
             <?php
+ 
 // Connect to the database
 $host = 'localhost'; //  database host
 $dbname = 'moon'; //  database name
@@ -84,14 +85,9 @@ foreach ($posts as $post) {
 }
 
 // Insert the HTML into the feed div
-echo "<div class='post'>$html</div>";
+echo "<div class='feed'>$html</div>";
+
 ?>
-            <div class="post">
-                <h1 class="nazev"></h1>
-                <p class="text"></p>
-            </div>   
-            
-            
         </div>
     </div>
 
