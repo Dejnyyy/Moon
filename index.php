@@ -11,8 +11,10 @@
     }
 ?>
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,19 +30,7 @@
 <?php
     include "connection.php";
     include "emailregex.php";
-
-    
-    /*tohle musim prepsat a domyslet*/
-    /*
-    if($isLogged){
-       require 'admin.php';
-    }
-    else{
-        require 'login.php';
-    }
-*/
     ?>
-
     <div class="topnav">
         <a><img class="icon" src="image-removebg-preview.png" alt="icon"></a>
         <div class="iconMoon"><p>Moon</p></div>
@@ -54,7 +44,6 @@
 
         <div class="logged"></div>
     </div>
-
     <div class="blank"></div>
     <div class="main">
         <div class="abfeedbar">
@@ -66,14 +55,60 @@
             </a>
         </div>      
     </div>
+    <div class="feedbar"></div>
         <div class="feed">
-            <div class="feedbar"></div>
-
             <div class="post">
+                <html lang="en">
                 <button class="postbtn"><a style="text-decoration: none" href="choose.html">+</a></button>
-            </div>            
+            </div>      
+            <?php
+// Connect to the database
+$host = 'localhost'; //  database host
+$dbname = 'moon'; //  database name
+$username = 'root'; // database username
+$password = ''; //  database password
+$db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+// Retrieve all the posts from the database, ordered by date
+$stmt = $db->prepare('SELECT * FROM post ORDER BY created_at DESC');
+$stmt->execute();
+$posts = $stmt->fetchAll();
+
+// Generate the HTML for all the posts
+$html = '';
+foreach ($posts as $post) {
+    $html .= '<div class="post">';
+    $html .= '<h1 class="nadpis">' . $post['nadpis'] . '</h1>';
+    $html .= '<p class="text">' . $post['text'] . '</p>';
+    $html .= '</div>';
+}
+
+// Insert the HTML into the feed div
+echo "<div class='post'>$html</div>";
+?>
+            <div class="post">
+                <h1 class="nazev"></h1>
+                <p class="text"></p>
+            </div>   
+            
+            
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--
     <script>
       // Retrieve the latest post data from the server using AJAX

@@ -8,19 +8,15 @@ if (!isset($_SESSION['username'])) {
     header('Location: login.php');
     exit;
 }
-
 // Get the username from the session variable
 $username = $_SESSION['username'];
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Page</title>
+    <title>User Page</title>
 </head>
 <body>
-    
-    
     <!-- Rest of your HTML and PHP code for the admin page -->
     
 </body>
