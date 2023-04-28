@@ -35,7 +35,7 @@
         <a  class="search" target="_blank">
             <i class="fa-solid fa-magnifying-glass fa-xl " style="color:#5203ab;"></i>
         </a>
-        <form action="server.php" method="post">
+        <form action="index.php" method="post">
         <input type="submit" name="logout" class="log" class="loga"value="Odhlásit se">
        
         </form>

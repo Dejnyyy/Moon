@@ -53,6 +53,7 @@ body{
   height: 25px;
   box-shadow: 0 0 10px #FFFFFF ; 
   color: #5203ab;
+  cursor: pointer;
 }
 .loga{
   text-decoration: none;
