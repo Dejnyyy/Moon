@@ -158,6 +158,16 @@ body{
   display: inline-block;
   margin-left: 4%;
   margin-top: 35px;
-  
   box-shadow: 0 0 10px #5203ab ;
+}
+.logout{
+  border: none;
+  border-radius: 25px;
+  margin-left: 20px;
+  margin-top: 20px ;
+  width: 150px;
+  height: 25px;
+  box-shadow: 0 0 10px #FFFFFF ; 
+  color: #5203ab;
+  cursor: pointer;
 }
