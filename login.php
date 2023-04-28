@@ -1,9 +1,3 @@
-<?php
-  session_start();
-
-  $_SESSION['email'] = '';
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,7 +9,7 @@
     <div class="container">
       <div class="div"></div>
       <h2>Log in</h2>
-      <form id="loginForm" class="loginForm" method="post" action="login.php">
+      <form id="loginForm" class="loginForm" method="post" action="loginCheck.php">
         <div class="form-group">
             <input type="e-mail" class="form-control"placeholder="e-mail" id="e-mail" name="e-mail" required>
           </div>

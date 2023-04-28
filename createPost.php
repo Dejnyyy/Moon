@@ -10,7 +10,7 @@
     <div class="container">
       <div class="div"></div>
       <h2>Create Post</h2>
-      <form id="createPostForm" class="createPostForm" method="post" action="createpost.php">
+      <form id="createPostForm" class="createPostForm" method="post" action="registerPost.php" >
         <div class="form-group">  
             <input type="text" class="form-control"placeholder="nadpis" id="nadpis" name="nadpis" required>
           </div>
@@ -22,7 +22,7 @@
         </div>-->
         
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
-        <input type="submit"class="btn1" href="createPost.php" value="Create Post">
+        <input type="submit"class="btn1"  value="Create Post">
 
       </form>
     </div>
