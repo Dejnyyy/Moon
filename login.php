@@ -1,10 +1,15 @@
+<?php
+  session_start();
+
+  $_SESSION['email'] = '';
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>Registrace a přihlášení</title>
     <link rel="stylesheet" href="login.css">
-    
   </head>
   <body>
     <div class="container">
@@ -18,7 +23,7 @@
           <input type="password" class="form-control" placeholder="password"id="password" name="password" required>
         </div>
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
-        <button type="submit" class="btn1"><a class="btn1a" href="login.html">Log in</a></button>
+        <input type="submit"  class="btn1 "value="Login">
 
       </form>
     </div>

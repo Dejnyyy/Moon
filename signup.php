@@ -10,45 +10,47 @@
     <div class="container">
       <div class="div"></div>
       <h2>Sign up</h2> 
-      <form id="registerForm" class="registerForm" method="post" action="register.php">
+      <form id="registerForm" class="registerForm" method="Post" action="registration.php">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="name" id="name" name="name" required>
         </div>
-        <div class="form-group">
 
-          <input type="text" class="form-control" placeholder="surname" id="surnameName" name="surame" required>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="surname" id="surnameName" name="surname" required>
         </div>
-        <div class="form-group">
 
+        <div class="form-group">
           <input type="text" class="form-control" placeholder="username" id="username" name="username" required>
         </div>
-        <div class="form-group">
 
+        <div class="form-group">
           <input type="password" class="form-control" placeholder="password"id="password" name="password" required>
         </div>
+        
         <div class="form-group">
-
           <input type="password" class="form-control" placeholder="conf password"id="confirmPassword" name="confirmPassword" required>
         </div>
+        
         <div class="form-group">
-
-          <input type="e-mail" class="form-control"placeholder="e-mail" id="e-mail" name="e-mail" required>
+          <input type="e-mail" class="form-control"placeholder="e-mail" id="e-mail" name="email" required>
         </div>
+        
         <div class="form-group">
-
           <input type="text" class="form-control" placeholder="control Question" id="con_question" name="con_question" required>
         </div>
+        
         <div class="form-group">
-
-          <input type="text" class="form-control" placeholder="control Answer" id="controlanswer" name="controlanswer" required>
+          <input type="text" class="form-control" placeholder="control Answer" id="controlanswer" name="con_answer" required>
         </div>
+        
         <div class="form-group">
             <input type="text" class="form-control" placeholder="note" id="note" name="note">
         </div>
+        
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
-        <button type="submit" class="btn1"><a class="btn1a" href="signup.html">Sign Up</a></button>
+       <input type="submit"class="btn1" value="Sign up">
       </form>
     </div>
-
+    
    </body> 
 </html>
