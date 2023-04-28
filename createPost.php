@@ -22,7 +22,7 @@
         </div>-->
         
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
-        <button type="submit" class="btn1"><a class="btn1a" href="createPost.html">Create</a></button>
+        <input type="submit"class="btn1" href="createPost.php" value="Create Post">
 
       </form>
     </div>
