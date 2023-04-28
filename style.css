@@ -47,7 +47,7 @@ body{
 .log{
   border: none;
   border-radius: 25px;
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 20px ;
   width: 100px;
   height: 25px;
@@ -146,4 +146,7 @@ body{
 .postbtn:hover{
   cursor: pointer;
  transform: scale(1.5); 
+}
+.odhlasit{
+  margin-left: 40px;
 }

@@ -1,15 +1,3 @@
-<?php
-  session_start();
-
-/*proces loggu (musim dodelat a poresit co a  jak)*/
-
-    if(isset($_SESSION["isLogged"])){
-        $isLogged = $_SESSION["isLogged"];
-    }
-    else{
-        $isLogged = false;
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +17,7 @@
     include "connection.php";
     include "emailregex.php";
 
-    
-    /*tohle musim prepsat a domyslet*/
-    /*
+    /*tohle musim prepsat a domyslet*//*
     if($isLogged){
        require 'admin.php';
     }
@@ -49,8 +35,10 @@
         <a  class="search" target="_blank">
             <i class="fa-solid fa-magnifying-glass fa-xl " style="color:#5203ab;"></i>
         </a>
-        <button class="log"><a class="loga" href="login.php">Log In</a></button>
-        <button class="reg"><a class="rega" href="signup.php">Register</a></button>
+        <form action="server.php" method="post">
+        <input type="submit" name="logout" class="log" class="loga"value="Odhlásit se">
+       
+        </form>
 
         <div class="logged"></div>
     </div>
