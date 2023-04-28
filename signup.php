@@ -48,7 +48,7 @@
         </div>
         
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
-       <input type="submit"class="btn1" value="Sign up">
+       <input type="submit"class="btn1"class="btn1a" value="Sign up">
       </form>
     </div>
     
