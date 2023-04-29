@@ -33,22 +33,19 @@ $username = $_SESSION['username'];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jQuery -->
     <script src="https://kit.fontawesome.com/a88d994df8.js" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
+    <script>
+   window.onload = function() {
+        var feed = document.querySelector('.feed');
+        addHeight(feed);
+   }
+</script>
 </head>
 <body>
 
 <?php
     include "connection.php";
     include "emailregex.php";
-
-    /*tohle musim prepsat a domyslet*//*
-    if($isLogged){
-       require 'admin.php';
-    }
-    else{
-        require 'login.php';
-    }
-*/
     ?>
     <div class="topnav">
         <a><img class="icon" src="image-removebg-preview.png" alt="icon"></a>
@@ -83,6 +80,31 @@ $username = $_SESSION['username'];
             <div class="post">
                 <button class="postbtn"><a style="text-decoration: none" href="choose.html">+</a></button>
             </div>
+            <?php
+            // Connect to the database
+            $host = 'localhost'; //  database host
+            $dbname = 'moon'; //  database name
+            $username = 'root'; // database username
+            $password = ''; //  database password
+            $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+            // Retrieve all the posts from the database, ordered by date
+            $stmt = $db->prepare('SELECT * FROM post ORDER BY created_at DESC');
+            $stmt->execute();
+            $posts = $stmt->fetchAll();
+            // Generate the HTML for all the posts
+            $html = '';
+            foreach ($posts as $post) {
+                 $html .= '<div class="post">';
+                $html .= '<h1 class="nadpis">' . $post['nadpis'] . '</h1>';
+                $html .= '<p class="text">' . $post['text'] . '</p>';
+                $html .= '<p class="created_at">' . $post['created_at'] . '</p>';
+                $html .= '<br>';
+                $html .= '</div>';
+                echo "<div class='post'>$html</div>";
+                $html = '';
+            }
+            ?>
         </div>
     </div>
 </body>

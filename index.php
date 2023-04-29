@@ -40,21 +40,18 @@
     <div class="topnav">
         <a><img class="icon" src="image-removebg-preview.png" alt="icon"></a>
         <div class="iconMoon"><p>Moon</p></div>
-
         <div class="space"></div>
         <a  class="search" target="_blank">
             <i class="fa-solid fa-magnifying-glass fa-xl " style="color:#5203ab;"></i>
         </a>
         <button class="log"><a class="loga" href="login.php">Log In</a></button>
         <button class="reg"><a class="rega" href="signup.php">Register</a></button>
-
         <div class="logged"></div>
     </div>
     <div class="blank"></div>
     <div class="main">
         <div class="abfeedbar">
             <div class="home"><a>Home</a></div>
-
             <div class="mainspace"></div>
             <div class="filter">
                 <a target="_blank"><img src="filter-svgrepo-com.png" style="width:25px">
@@ -86,6 +83,8 @@
                  $html .= '<div class="post">';
                 $html .= '<h1 class="nadpis">' . $post['nadpis'] . '</h1>';
                 $html .= '<p class="text">' . $post['text'] . '</p>';
+                $html .= '<p class="created_at">' . $post['created_at'] . '</p>';
+                $html .= '<br>';
                 $html .= '</div>';
                 echo "<div class='post'>$html</div>";
                 $html = '';

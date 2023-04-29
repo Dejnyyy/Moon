@@ -8,7 +8,6 @@ if(isset($_POST['e-mail']) && isset($_POST['password'])){
 
     $sql = "SELECT * FROM user WHERE username = '$username' AND password = SHA1('$password')";
     $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-
     if(mysqli_num_rows($result) == 1){
         $row = mysqli_fetch_assoc($result);
         $_SESSION['id_user'] = $row['id_user'];

@@ -18,7 +18,6 @@
         </div>
         <button type="submit" class="btn"><a class="btna" href="index.php">Home</a></button>
         <input type="submit"  class="btn1 "value="Login">
-
       </form>
     </div>
    </body>
