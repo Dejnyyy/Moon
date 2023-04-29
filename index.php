@@ -24,7 +24,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jQuery -->
     <script src="https://kit.fontawesome.com/a88d994df8.js" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
+    <script>
+   window.onload = function() {
+        var feed = document.querySelector('.feed');
+        addHeight(feed);
+   }
+</script>
 </head>
 <body>
 <?php
@@ -59,7 +65,7 @@
         <div class="feed">
             <div class="post">
                 <html lang="en">
-                <button class="postbtn" onclick="addHeight()"><a style="text-decoration: none" href="choose.html">+</a></button>
+                <button class="postbtn" ><a style="text-decoration: none" href="choose.html">+</a></button>
             </div>      
             <?php
             // Connect to the database
@@ -87,39 +93,5 @@
             ?>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--
-    <script>
-      // Retrieve the latest post data from the server using AJAX
-      $.get("/getLatestPost.php", function(data) {
-          // Parse the JSON data
-          const post = JSON.parse(data);
-          
-          // Create a new post element with the given data
-          const postElement = `
-            <div class="post">
-              <h2 class="post-title">${post.title}</h2>
-              <p class="post-text">${post.text}</p>
-            </div>
-          `;
-          
-          // Append the new post element to the HTML body
-          $("body").append(postElement);
-        });
-          </script>-->
 </body>
 </html>
