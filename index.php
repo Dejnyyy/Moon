@@ -59,35 +59,32 @@
         <div class="feed">
             <div class="post">
                 <html lang="en">
-                <button class="postbtn"><a style="text-decoration: none" href="choose.html">+</a></button>
+                <button class="postbtn" onclick="addHeight()"><a style="text-decoration: none" href="choose.html">+</a></button>
             </div>      
             <?php
- 
-// Connect to the database
-$host = 'localhost'; //  database host
-$dbname = 'moon'; //  database name
-$username = 'root'; // database username
-$password = ''; //  database password
-$db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+            // Connect to the database
+            $host = 'localhost'; //  database host
+            $dbname = 'moon'; //  database name
+            $username = 'root'; // database username
+            $password = ''; //  database password
+            $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
-// Retrieve all the posts from the database, ordered by date
-$stmt = $db->prepare('SELECT * FROM post ORDER BY created_at DESC');
-$stmt->execute();
-$posts = $stmt->fetchAll();
+            // Retrieve all the posts from the database, ordered by date
+            $stmt = $db->prepare('SELECT * FROM post ORDER BY created_at DESC');
+            $stmt->execute();
+            $posts = $stmt->fetchAll();
 
-// Generate the HTML for all the posts
-$html = '';
-foreach ($posts as $post) {
-    $html .= '<div class="post">';
-    $html .= '<h1 class="nadpis">' . $post['nadpis'] . '</h1>';
-    $html .= '<p class="text">' . $post['text'] . '</p>';
-    $html .= '</div>';
-}
-
-// Insert the HTML into the feed div
-echo "<div class='feed'>$html</div>";
-
-?>
+            // Generate the HTML for all the posts
+            $html = '';
+            foreach ($posts as $post) {
+                 $html .= '<div class="post">';
+                $html .= '<h1 class="nadpis">' . $post['nadpis'] . '</h1>';
+                $html .= '<p class="text">' . $post['text'] . '</p>';
+                $html .= '</div>';
+                echo "<div class='post'>$html</div>";
+                $html = '';
+            }
+            ?>
         </div>
     </div>
 

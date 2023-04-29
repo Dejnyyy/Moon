@@ -13,3 +13,15 @@ post.appendChild(button);
 
 // Append the post element to the body
 body.appendChild(post);
+
+function addHeight(){
+    var divCounter = 0;
+    var divRow = 0;
+    var posts = feed.querySelectorAll('.post');
+    for (var i = 0; i < posts.length; i++) {
+        divCounter++;
+        if (divCounter % 3 === 0) {
+            divRow++;
+        }
+    }feed.style.height = (200 * divRow) + 'px';
+    }

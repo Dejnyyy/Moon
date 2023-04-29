@@ -115,10 +115,6 @@ body{
   height: 200%;
   margin-left: 20%;
   box-shadow: 0 0 10px #5203ab ; 
-  display: flex !important;
-  flex-direction: column !important;
-  flex-grow: 1 !important ;
-  
 }
 .feed>div{
   display: inline-block;
@@ -127,8 +123,6 @@ body{
   height: 350px;
   border-radius: 5px;
   box-shadow: 0 0 10px #5203ab ;
-  margin-left: 4%;
-  margin-top: 35px;
 }
 .feedbar{
   width: 100%;
@@ -136,7 +130,6 @@ body{
 }
 .post{
   overflow-wrap: break-word; 
-  
 }
 .postbtn{
   color:#5203ab;
@@ -173,5 +166,5 @@ body{
 }
 .post {
   display: inline-block;
-  margin-bottom: 20px; /* add some margin between posts */
+ /* add some margin between posts */
 }
