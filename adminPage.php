@@ -100,11 +100,29 @@ $username = $_SESSION['username'];
                 $html .= '<p class="text">' . $post['text'] . '</p>';
                 $html .= '<p class="created_at">' . $post['created_at'] . '</p>';
                 $html .= '<br>';
+                $html .= '<button class="delButt" data-id="<?php echo $post_id; ?>">X</button>';
                 $html .= '</div>';
                 echo "<div class='post'>$html</div>";
                 $html = '';
             }
+            
             ?>
+            <script>
+$(document).ready(function(){
+    $('.delButt').click(function(){
+        var post_id = $(this).data('id');
+        $.ajax({
+            type: 'POST',
+            url: 'delete_post.php',
+            data: {id_post: post_id},
+            success: function(response){
+                // handle the response from the server
+                console.log(response);
+            }
+        });
+    });
+});
+</script>
         </div>
     </div>
 </body>

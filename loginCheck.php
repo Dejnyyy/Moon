@@ -12,7 +12,7 @@ if(isset($_POST['e-mail']) && isset($_POST['password'])){
         $row = mysqli_fetch_assoc($result);
         $_SESSION['id_user'] = $row['id_user'];
         $_SESSION['username'] = $row['username'];
-        header("Location: adminPage.php");
+        header("Location: adminCreatePost.php");
         exit();
     }
     else{

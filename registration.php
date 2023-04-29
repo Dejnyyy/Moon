@@ -12,7 +12,7 @@
     $sql = "INSERT INTO user (name, surname, username, password, email, con_question, con_answer, note) VALUES ('".$name."', '".$surname."', '".$username."', '".$password."', '".$email."', '".$con_question."', '".$con_answer."', '".$note."')";
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
     
-    header("Location:index.php");
+    header("Location:login.php");
     die();
     
 ?>  

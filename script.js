@@ -8,7 +8,7 @@ function addHeight(feed) {
             divRow++;
         }
     }
-    feed.style.height = (250 * divRow) + 'px';
+    feed.style.height = (200 * divRow) + 'px';
     console.log(divCounter);
     console.log(divRow);
 }

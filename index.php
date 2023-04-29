@@ -5,16 +5,13 @@
 
     if(isset($_SESSION["isLogged"])){
         $isLogged = $_SESSION["isLogged"];
+        header("Location: adminPage.php");
     }
     else{
         $isLogged = false;
     }
 ?>
-
-
-
 <!DOCTYPE html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
